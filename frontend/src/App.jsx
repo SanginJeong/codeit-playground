@@ -5,11 +5,18 @@ import AdminPage from "./pages/AdminPage/AdminPage";
 import HomePage from "./pages/HomePage/HomePage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import PrivatePage from "./pages/PrivatePage/PrivatePage";
+import PartPage from "./pages/PartPage/PartPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import SignupPage from "./pages/SignupPage/SignupPage";
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<AppLayout />}>
         <Route index element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="part/:id" element={<PartPage />} />
       </Route>
 
       <Route element={<PrivatePage />}>
