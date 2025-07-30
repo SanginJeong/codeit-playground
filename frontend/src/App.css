@@ -14,4 +14,8 @@
   .button {
     @apply cursor-pointer rounded-md;
   }
+  .selected {
+    background-color: oklch(55.8% 0.288 302.321);
+    color: white;
+  }
 }

@@ -8,6 +8,7 @@ import PrivatePage from "./pages/PrivatePage/PrivatePage";
 import PartPage from "./pages/PartPage/PartPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
+import CategoryDetailPage from "./pages/CategoryDetailPage/CategoryDetailPage";
 
 function App() {
   return (
@@ -16,7 +17,11 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="part/:id" element={<PartPage />} />
+        <Route path="part">
+          <Route path=":id" element={<PartPage />}>
+            <Route path=":category" element={<CategoryDetailPage />} />
+          </Route>
+        </Route>
       </Route>
 
       <Route element={<PrivatePage />}>
