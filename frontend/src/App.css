@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+@layer components {
+  .text-primary {
+    color: oklch(55.8% 0.288 302.321);
+  }
+  .bg-primary {
+    background-color: oklch(55.8% 0.288 302.321);
+  }
+  .hover\:bg-primary:hover {
+    color: white;
+    background-color: oklch(55.8% 0.288 302.321);
+  }
+  .button {
+    @apply cursor-pointer rounded-md;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+}
